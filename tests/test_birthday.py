@@ -1,4 +1,4 @@
-from lib.birthday import *
+from lib.birthday import * 
 
 def test_add_birthday():
     birthday = Birthday()
