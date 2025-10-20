@@ -19,4 +19,19 @@ def test_update_name():
 
     assert birthday.birthday_dict == {"michael": "12/08/2025"}
 
-def test_
+def test_get_upcoming_birthdays():
+
+    birthday = Birthday()
+    birthday.add_birthday("euan", "10/11/2000")
+    result = birthday.upcoming_birthday()
+
+    assert result == {"euan": "10/11/2000"}
+
+def test_get_upcoming_birthday_age():
+
+    birthday = Birthday()
+    birthday.add_birthday("euan", "22/10/2000")
+    result = birthday.upcoming_birthday_age()
+
+    assert result == {"euan": 25}
+    
