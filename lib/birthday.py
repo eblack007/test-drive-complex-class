@@ -15,3 +15,14 @@ class Birthday():
             self.birthday_dict[name] = dob
         else:
             return "Person does not exist!"
+        
+    def update_name(self, name, dob, newname):
+
+        if (name) in self.birthday_dict:
+            self.birthday_dict[newname] = self.birthday_dict[name]
+            del self.birthday_dict[name]
+        else:
+            return "Person does not exist!"
+        
+    
+    
